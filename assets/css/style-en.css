@@ -1,0 +1,109 @@
+body {
+  text-align: left;
+  direction: ltr;
+}
+
+.side-bar {
+  left: -400px;
+}
+
+.side-bar.open {
+  right: auto !important;
+  left: 0;
+}
+
+.custom-paginate ul li a span.number.icon i {
+  transform: rotate(180deg);
+}
+
+.modal-content .content .head h4 {
+  text-align: left;
+}
+
+.modal-content .content .head::after {
+  right: auto;
+  left: -10px;
+}
+
+.about_us .image .img_border {
+  left: -37px;
+  right: auto;
+}
+
+.head-with-border h2 {
+  position: relative;
+}
+
+.head-with-border h2:before {
+  right: 0;
+}
+
+.floating-label-group .floating-label {
+  right: auto;
+  left: 12px;
+}
+/* media */
+.small_collapse .icon {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.fa-chevron-left {
+  transform: rotate(180deg);
+}
+
+.open_small .small_collapse .icon {
+  left: auto;
+  right: -24px;
+  transform: rotate(360deg);
+}
+
+.side-bar .side-bar-route li a .tooltip_section {
+  right: -179px;
+  left: auto;
+}
+
+.dropdown_menu {
+  left: auto;
+  right: 0;
+}
+
+.records .wrapper_box .dataTables_filter label:after {
+  left: auto;
+  right: 30px;
+}
+
+.nice-select::after {
+  width: 10px;
+  height: 10px;
+  left: 90%;
+  right: auto;
+}
+
+.iti__country-list {
+  position: fixed !important;
+  right: auto !important;
+  left: 51% !important;
+}
+
+@media (max-width: 991px) {
+  .iti__country-list {
+    position: fixed !important;
+    left: 11% !important;
+    right: auto !important;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown_menu.chat_dropmenu {
+    right: -60px;
+    left: auto;
+  }
+
+  .dropdown_menu.profile_menu {
+    left: -110px;
+    right: auto;
+  }
+}

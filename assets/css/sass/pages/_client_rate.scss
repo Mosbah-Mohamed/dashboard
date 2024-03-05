@@ -1,0 +1,324 @@
+// ============ start client rate ============
+.client_panel {
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 15px 28px 0px rgba(201, 201, 201, 0.08);
+  margin-top: 40px;
+
+  &.main_chat_page {
+    width: 70%;
+    margin: 0 auto 60px;
+
+    .image_sender {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 60px;
+
+      .image {
+        width: 60px;
+        height: 60px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .online {
+          width: 10px;
+          height: 10px;
+          display: block;
+          background: #61c554;
+          border-radius: 50px;
+          position: absolute;
+          bottom: 13px;
+          left: 8px;
+        }
+      }
+
+      .info {
+        h4 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+        span {
+          color: #b9bec3;
+        }
+      }
+    }
+
+    .client_rate {
+      border: 1px solid rgba(97, 197, 84, 1);
+      margin-top: 32px;
+      border-radius: 16px;
+    }
+  }
+
+  > a {
+    border-radius: 16px 16px 0px 0px;
+    background: #fff4fb;
+    box-shadow: 0px 15px 28px 0px rgba(201, 201, 201, 0.08);
+    padding: 16px 32px;
+    border: none;
+    color: $mainColor;
+    display: block;
+
+    &:hover {
+      //   background: unset;
+    }
+    p {
+      strong {
+        color: $mainColor;
+        font-size: 24px;
+      }
+
+      i {
+        font-size: 27px;
+      }
+    }
+  }
+
+  .client_rate {
+    .card {
+      border: none;
+    }
+
+    .wrapper_box {
+      padding-bottom: 80px;
+
+      &.all_btns {
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        .all_action_btns {
+          gap: 5px;
+          flex-wrap: wrap;
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .dataTables_wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+
+        table.table {
+          min-width: 700px;
+        }
+      }
+      form {
+        input {
+        }
+        textarea {
+          height: 73px;
+        }
+
+        button {
+          margin-top: 25px;
+          background: #3c102e;
+          color: #fff;
+          border-radius: 40px;
+          height: 45px;
+          font-weight: bold;
+          border: 1px solid transparent;
+          transition: 0.5s;
+
+          &.record {
+            max-width: 50%;
+            margin: auto;
+          }
+
+          &:hover {
+            border: 1px solid $mainColor;
+            color: $mainColor;
+            background: transparent;
+          }
+        }
+      }
+
+      .chat_panel {
+        padding: 0 35px;
+        margin-top: 44px;
+        max-height: 600px;
+        overflow-y: auto;
+
+        .sender,
+        .reciever {
+          max-width: 500px;
+          margin-bottom: 60px;
+          .content {
+            background: #e8ecef;
+            padding: 10px;
+            min-height: 47px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: fit-content;
+
+            .image_chat {
+              max-width: 250px;
+              max-height: 250px;
+            }
+
+            .video_chat {
+              video {
+                max-width: 250px;
+                max-height: 250px;
+              }
+            }
+            .audio_chat {
+              audio {
+                max-width: 250px;
+                max-height: 250px;
+              }
+            }
+          }
+
+          .time {
+            color: #727272;
+            margin-top: 10px;
+          }
+        }
+        .reciever {
+          margin-bottom: 15px;
+          margin-inline-start: auto;
+          .content {
+            margin-inline-start: auto;
+            background: #61c554;
+            color: #fff;
+          }
+        }
+
+        .upload_image_files {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 50px;
+          .inputs {
+            flex: 1;
+            @include centering;
+            box-shadow: 0 12px 24px 0 rgba(140, 140, 140, 0.08);
+            border-radius: 60px;
+            background: #fff;
+
+            .main_upload {
+              label {
+                cursor: pointer;
+              }
+              input {
+                display: none;
+              }
+            }
+
+            .upload_text {
+              flex: auto;
+              input {
+                background: none;
+              }
+            }
+          }
+          .microphone {
+            cursor: pointer;
+            .icon {
+              width: 50px;
+              height: 50px;
+              border-radius: 50px;
+              @include centering;
+              background: #61c554;
+              i {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.client_panel .client_rate .wrapper_box .dataTables_wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.client_panel
+  .client_rate
+  .wrapper_box
+  .dataTables_wrapper::-webkit-scrollbar-track {
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.client_panel
+  .client_rate
+  .wrapper_box
+  .dataTables_wrapper::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #bec2c5;
+}
+
+.show_whats_div {
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+ul.select2-results__options {
+  display: flex;
+  flex-direction: column;
+}
+.select2-container--default .select2-selection--multiple {
+  height: 40px;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__clear {
+  width: unset;
+  height: unset !important;
+  margin-top: 4px !important;
+  background: unset !important;
+  color: red !important;
+  outline: none !important;
+  border: none !important;
+  font-size: 21px;
+}
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
+  width: unset;
+  height: unset !important;
+  margin-top: -4px !important;
+  background: unset !important;
+  color: red !important;
+  outline: none !important;
+  border: none !important;
+  font-size: 21px;
+}
+
+.check_boxes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+
+  input {
+    width: 20px;
+    height: 20px;
+    accent-color: maroon;
+    cursor: pointer;
+  }
+
+  label {
+    margin: 0 !important;
+  }
+}
+// ============ end client rate ==============
